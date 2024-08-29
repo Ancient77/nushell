@@ -161,7 +161,6 @@ pub fn complete_item(
     let expanded_partial = expand_ndots(Path::new(&cleaned_partial));
     let mut partial = expanded_partial.to_string_lossy().to_string();
 
-
     #[cfg(unix)]
     let path_separator = SEP;
     #[cfg(windows)]
