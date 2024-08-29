@@ -934,7 +934,7 @@ fn folder_with_directorycompletions() {
     let mut completer = NuCompleter::new(Arc::new(engine), Arc::new(stack));
 
     // Test completions for the current folder
-    let target_dir = format!("cd {dir_str}{MAIN_SEPARATOR}");
+    let target_dir = format!("cd {dir_str}/");
     let suggestions = completer.complete(&target_dir, target_dir.len());
 
     // Create the expected values
@@ -978,7 +978,7 @@ fn folder_with_directorycompletions_with_dots() {
     let mut completer = NuCompleter::new(Arc::new(engine), Arc::new(stack));
 
     // Test completions for the current folder
-    let target_dir = format!("cd {dir_str}{MAIN_SEPARATOR}..{MAIN_SEPARATOR}");
+    let target_dir = format!("cd {dir_str}/../");
     let suggestions = completer.complete(&target_dir, target_dir.len());
 
     // Create the expected values
