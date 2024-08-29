@@ -164,7 +164,7 @@ pub fn complete_item(
     #[cfg(unix)]
     let path_separator = SEP;
     #[cfg(windows)]
-    let path_separator = partial
+    let path_separator = cleaned_partial
         .chars()
         .rfind(|c: &char| is_separator(*c))
         .unwrap_or(SEP);
